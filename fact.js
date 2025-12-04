@@ -1,6 +1,7 @@
-const saveBtn = document.getElementById("save_btn");
-const favsList = document.getElementById("fav_facts");
+
 const fact = document.getElementById("fact_space");
+const favsList = document.getElementById("fav_facts");
+const saveBtn = document.getElementById("save_btn");
 
 let favs = [];
 
@@ -8,12 +9,12 @@ function getFact() {
     fact.textContent = " Searching... ";
 
     fetch("https://uselessfacts.jsph.pl/random.json?language=en")
-        .then(response => response.json())   // Convertimos la respuesta a JSON
+        .then(response => response.json())  
         .then(data => {
-            fact.textContent = data.text;    // Mostramos el dato en el <p>
+            fact.textContent = data.text;
         })
         .catch(error => {
-            fact.textContent = "Error loading fact"; // Manejo de errores
+            fact.textContent = "Error loading fact";
             console.error(error);
         });
 }

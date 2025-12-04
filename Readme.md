@@ -10,10 +10,6 @@ UFacts is a Single Page Application (SPA) that fetches random useless facts from
 - Replace the current fact with a new one.
 - Save favorite facts to a list on the same page.
 - Single-page application (no page reloads).
-- Clean and simple responsive design.
-- Optional mobile-first and multi-breakpoint responsiveness.
-- Unit tests for core functionality.
-- Gitflow workflow for organized feature development.
 
 ---
 
@@ -24,15 +20,10 @@ UFacts is a Single Page Application (SPA) that fetches random useless facts from
 - **JavaScript (Vanilla JS)**  
 - **Fetch API**  
 
-**Optional / Bonus:**  
-- CSS libraries for styling  
-- Vitest / Jest for testing  
-
 ---
 
 ## 📁 Project Structure
 
-```text
 project-root/
 │
 ├─ index.html
