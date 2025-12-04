@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171b30;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.factBox {
+    background-color: #1c7b9d;
+    width: 50vw;
+    height: 80vh;
+    padding: 3em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 4em;
+    border-radius: 6px;
+    background-color: #dbeeed;
+    color: #0d0d0d;
+    font-family: monospace;
+}
+
+.btn:hover {
+    background-color: #e1e1e1;
+}
+
+.fact_space{
+    background-color: #9cbdd6;
+    width: 20em;
+    height: 15em;
+    margin: 2em;
+    border-radius: 10px;
+    padding: 2em 2em;
+}
+
+.fav-facts{
+    background-color: #9cbdd6; 
+}
+
+.fav_facts_space{
+    background-color: #9cbdd6;
+    width: 40em;
+    height: 15em;
+    margin: 2em;
+    border-radius: 10px;
+    padding: 2em 2em;
+} 
