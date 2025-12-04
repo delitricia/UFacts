@@ -1,6 +1,10 @@
-function getFact() {
-    const fact = document.getElementById("fact_space");
+const saveBtn = document.getElementById("save_btn");
+const favsList = document.getElementById("fav_facts");
+const fact = document.getElementById("fact_space");
 
+let favs = [];
+
+function getFact() {
     fact.textContent = " Searching... ";
 
     fetch("https://uselessfacts.jsph.pl/random.json?language=en")
@@ -15,14 +19,22 @@ function getFact() {
 }
 document.getElementById("btn").addEventListener("click", getFact);
 
+function saveFavs() {
+    const currentFact = fact.textContent;
 
+    if (currentFact && !favs.includes(currentFact)) {
+        favs.push(currentFact);
+        updateFavsUI();
+    }
+}
 
+function updateFavsUI() {
+    favsList.innerHTML = ""; 
+    favs.forEach(fact => {
+        const li = document.createElement("li");
+        li.textContent = fact;
+        favsList.appendChild(li);
+    });
+}
 
-//console.log ("algo");
-//let num = 5;
-//const prueba = true;
-//console.log("mi edad es " + num)
-
-
-
-//ref: https://www.youtube.com/watch?v=bmGPv687toc&t=1645s
+saveBtn.addEventListener("click", saveFavs); 
